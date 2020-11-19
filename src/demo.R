@@ -1,5 +1,6 @@
-# author: Tiffany Timbers
-# date: 2020-01-15
+# author: Vignesh Rajakumar
+# citation: Adapted from TIffany Timber's code in UBC MDS DSCI 522 
+# date: 2020-11-19
 
 "This script prints out docopt args.
 Usage: demo.R <arg1> --arg2=<arg2> [--arg3=<arg3>] [<arg4>]
@@ -11,7 +12,16 @@ Options:
 " -> doc
 
 library(docopt)
+
 opt <- docopt(doc)
-print(opt)
-print(typeof(opt))
-print(opt$arg4)
+
+main <- function(opt) {
+    # Print the docopt object
+    print(opt)
+
+    # Print the type of the docopt object
+    print(typeof(opt))
+
+    # Print optional arg4
+    print(opt$arg4)
+}
