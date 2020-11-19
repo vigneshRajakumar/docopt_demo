@@ -25,3 +25,5 @@ main <- function(opt) {
     # Print optional arg4
     print(opt$arg4)
 }
+
+main(opt)
